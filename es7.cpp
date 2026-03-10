@@ -1,21 +1,23 @@
 //Chiedi un numero n e stampa tutti i numeri pari da 2 fino a n 
-
 #include <iostream>
+#include <string>
 using namespace std;
 
+
+
+
 int main() {
-int n;
-cout <<   "inserisci il numero" << endl;
-cin >> n;
-int totale=1;
+    int n,i=2;
+    cout << "Inserisci un numero: ";
+    cin >> n;
+while(i<=n){    
+    if(i%2==0){
+        cout << i << endl;
+    }
+    i++;
+}
+    
 
-for(int i=2; i<=n; i) {
-
-
+    return 0;
 }
 
-    totale=totale*n;
-    n--;
-cout <<   totale << endl;
-
-}
