@@ -6,13 +6,13 @@ using namespace std;
 
 int main() {
     int n= 10;
-    int* numeri = new int[n];
+    int numeri[n];
 
     
     srand(time(0));
 
     // Genera numeri casuali tra 1 e 50
-    for (int i = 0; i <= n; i++) {
+    for (int i = 0; i < n; i++) {
         numeri[i] = rand() % 50 + 1;
     }
 
@@ -30,9 +30,9 @@ int main() {
 
     cout << "Il vettore generato è: ";
     for (int i = 0; i < n; i++) {
-        cout << numeri[i] << endl;
+        cout << numeri[i] << " ";
     }
-    
+    cout << endl;
 
     cout << "Il numero massimo è: " << massimo << " e si trova alla posizione: " << posizioneMassimo << endl;
 

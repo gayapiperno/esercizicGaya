@@ -7,7 +7,7 @@
 using namespace std;
 int main() {
     int n = 10;
-    int* numeri = new int[n];
+    int numeri [n];
     srand(time(0));
 
     // Genera numeri casuali
@@ -23,7 +23,7 @@ int main() {
         if (i % 2 == 0) { // Controlla se la posizione è pari
             sommaPosizioniPari += numeri[i]; // Aggiunge l'elemento alla somma se la posizione è pari
         }
-        i++;
+        
     }  
 
     cout << "La somma degli elementi nelle posizioni pari è: " << sommaPosizioniPari << endl;       

@@ -6,14 +6,21 @@ int main() {
     cout << "Quanti numeri vuoi inserire? ";
     cin >> n;
 
-    double* numeri = new double[n];
+    double numeri[n];
     double somma = 0.0;
 
     for (int i = 0; i < n; i++) {
-        cout << "Inserisci il numero " << i + 1 << ": ";
+        cout << "Inserisci il numero " << i << ": ";
+        
         cin >> numeri[i];
         somma += numeri[i];
+        
     }
+    for (int i = 0; i < n; i++) {
+        cout << numeri[i] << " ";
+    }
+    cout << endl;       
+
 
     double media = somma / n;
     cout << "La media dei numeri inseriti è: " << media << endl;

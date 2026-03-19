@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    string* parole = new string[10];
+    string parole[10];
     parole[0] = "Ciao";
     parole[1] = "Palestra";
     parole[2] = "Esercizi";

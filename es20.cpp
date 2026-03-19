@@ -7,20 +7,26 @@ int main() {
     cout << "Quanti numeri vuoi inserire? ";
     cin >> n;
 
-    int* numeri = new int[n];
+    int numeri[n];
 
     for (int i = 0; i <= n; i++) {
         cout << "Inserisci il numero " << endl;
         cin >> numeri[i];
-        i++;
+        
     }
+    for (int i = 0; i < n; i++){
+
+        cout << numeri[i] << " ";
+    }
+    cout << endl;
+    
 
     int minimo =99999;
     for (int i = 0; i < n; i++) {
         if (numeri[i] < minimo) {
             minimo = numeri[i];
         }
-        i++;
+       
     }
 
     cout << "Il numero più piccolo è: " << minimo << endl;

@@ -6,8 +6,8 @@
 using namespace std;
 int main() {
     int n = 10;
-    string* nomi = new string[n];
-    string* nomiPossibili = new string[5];
+    string nomi[n];
+    string nomiPossibili[5];
     nomiPossibili[0] = "Luca";
     nomiPossibili[1] = "Anna";
     nomiPossibili[2] = "Marco";
@@ -24,6 +24,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         cout << nomi[i] << endl;
     }       
+      
     // Trova la posizione di "Anna"
     bool trovato = false;   
 
@@ -31,6 +32,6 @@ int main() {
         if (nomi[i] == "Anna") {
             trovato = true;
             cout << "Il nome 'Anna' si trova alla posizione: " << i << endl;
-            break; // Esce dal ciclo una volta trovato il nome
+            break; 
         }
     }     }      
