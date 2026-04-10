@@ -7,14 +7,13 @@ using namespace std;
 int main() {
     int n = 10;
     int numeri[n];
-    
-   int numero;
+    srand(time(0)); // Inizializza il generatore di numeri casuali con un seme basato sul tempo corrente
+   
     for (int i = 0; i < n; i++) {
-        cout << "Inserisci un numero: ";
-        numeri[i] = numero;
+       numeri[i] = rand() % 100 + 1;
     }
     for (int i = 0; i < n; i++) {
-        cout << numeri[i] << endl;
+        cout << numeri[i] << endl;  
     }
     int contapari = 0;
     for (int i = 0; i < n; i++) {

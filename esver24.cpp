@@ -7,15 +7,14 @@ using namespace std;
 int main() {
     int n = 5;
     int numeri[n];
-    
+    srand(time(0)); // Inizializza il generatore di numeri casuali con un seme basato sul tempo corrente
 
-int numero;
+
     // Genera numeri casuali
     for (int i = 0; i < n; i++) {
-        cout << "Inserisci un numero: ";
-        cin >> numero;
+        numeri[i] = rand() % 100 + 1; // Genera un numero casuale tra 1 e 100
 
-        numeri[i] = numero;
+        
     }
     for (int i = 0; i < n; i++) {
         cout << numeri[i] << endl;
