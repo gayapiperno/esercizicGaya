@@ -1,0 +1,48 @@
+ /*Scrivere un programma che per una classe con 10 alunni per ogni alunno:
+ – chiede quanti voti ha,
+– li fa inserire,
+– calcola per ogni alunno la media,
+– stampa quante insufficienze ha quell’alunno.
+Dopo che sono stati inseriti i voti per tutti gli alunni,
+ il programma dice quanti voti insufficienti in tutto ci sono stati 
+e quanti alunni hanno una media inferiore al 6 noncon array*/
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+using namespace std;
+int main() {
+    int alunni = 10;
+    int totaleInsufficienze = 0;
+    int alunniConMediaInferioreA6 = 0;  
+    int sommaVoti=0;
+    int Insufficienze=0;
+    int voto;
+    int media;
+  
+    for (int i = 0; i < alunni; i++) {
+        int numVoti;
+        cout << "Inserisci il numero di voti per l'alunno " << endl;
+        cin >> numVoti;
+        for(int j = 0; j < numVoti; j++) {
+
+            cout << "Inserisci il voto " << endl;
+            cin >> voto;
+            sommaVoti += voto;
+            if(voto < 6){
+                Insufficienze++;
+                cout << "L'alunno ha " << Insufficienze << " insufficienze." << endl;
+                totaleInsufficienze++;
+            }
+        
+        media = sommaVoti / numVoti;}
+        cout << "La media dell'alunno è: " << media << endl;    
+        
+        if (media < 6) {
+            alunniConMediaInferioreA6++;
+        }
+    
+    cout << "Il totale delle insufficienze è: " << totaleInsufficienze << endl;
+    cout << "Il numero di alunni con media inferiore a 6 è: " << alunniConMediaInferioreA6 << endl;
+}

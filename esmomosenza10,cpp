@@ -1,0 +1,80 @@
+//il primo della verifica 6 fatto da ame
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+    double incassototale;  
+    double max = -1;     
+    int maxprodotto = -1;
+    string negoziomaggiore; 
+    string prodottomaggiore; 
+
+    cout << "inserisci il numero dei negozi che vuoi inserire: ";
+    int negozi;
+    cin>>negozi;
+    
+    cout << "quanti prodotti per ogni negozio? ";
+    int m;
+    cin >> m;
+
+    for(int i = 0; i < negozi; i++) {
+        cout << "inserisci il nome del negozio: ";
+        string negozio;
+        cin >> negozio;
+
+        incassototale = 0; 
+
+        for(int j = 0; j < m; j++) {
+
+            cout<<"inserisci il nome del prodotto";
+            string prodotto; 
+            cin>>prodotto;
+            cout<<"inserisci il numero di unita vendute";
+            int unita;
+            cin>>unita;
+            cout<<"inserisci il prezzo unitario";
+            double prezzouni; 
+            cin>>prezzouni;
+            
+            double prezzofinale = 0;
+
+            if(unita>100) {
+
+                prezzofinale = (unita * prezzouni) * 0.80;
+            }
+            else if(unita> 50) {
+
+                prezzofinale = (unita * prezzouni) * 0.90;
+            }
+
+            else {
+
+                prezzofinale = (unita * prezzouni);
+            }
+
+            incassototale = incassototale + prezzofinale;
+
+            if(unita>maxprodotto) {
+
+                maxprodotto = unita;
+                prodottomaggiore = prodotto;
+            }
+        }
+
+        cout <<"incasso del negozio"<<negozio<< incassototale << endl;
+
+        if(incassototale>max) {
+
+            max = incassototale;
+            negoziomaggiore = negozio;
+        }
+    }
+
+    cout << "il negozio con l'incasso maggiore e" << negoziomaggiore << "con" << max << endl;
+    cout << "il prodotto piu' venduto e': " << prodottomaggiore << "con" << maxprodotto << "unita" << endl;
+
+    return 0;
+}
